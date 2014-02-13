@@ -9,4 +9,5 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-OpenSourceBridgeProposals::Application.config.secret_key_base = 'e860a91e28334e74e077ac9758a2f06c90b84e7d857856e5dc31869211975605efeba1fc1414333b8266527a02ae2c6445678bbe372e084b20b673d5b7aeeaab'
+OpenSourceBridgeProposals::Application.config.secret_key_base = OpenConferenceWare.secret_key_base
+

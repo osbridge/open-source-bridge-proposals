@@ -1,6 +1,34 @@
+GIT
+  remote: https://github.com/osbridge/openconferenceware.git
+  revision: 66fe6bb0c84cb6024d0a408a52da309ea1dfc9bc
+  specs:
+    open_conference_ware (1.0.0.pre3)
+      RedCloth (~> 4.2.0)
+      aasm (~> 3.0.0)
+      acts-as-taggable-on (~> 2.4.1)
+      color (~> 1.4.2)
+      comma (~> 3.0)
+      dynamic_form (~> 1.1.4)
+      gchartrb (~> 0.8.0)
+      hashery (~> 2.1.0)
+      jquery-rails (~> 3.0.0)
+      nokogiri (~> 1.6.0)
+      omniauth (~> 1.1.4)
+      paperclip (~> 3.5.2)
+      prawn (~> 0.12.0)
+      rails (~> 4.0.2)
+      rails-observers (~> 0.1.2)
+      rinku (~> 1.7.3)
+      sass-rails (~> 4.0.0)
+      uglifier (~> 2.3.0)
+      vpim (~> 13.11.11)
+
 GEM
   remote: https://rubygems.org/
   specs:
+    Ascii85 (1.0.2)
+    RedCloth (4.2.9)
+    aasm (3.0.26)
     actionmailer (4.0.2)
       actionpack (= 4.0.2)
       mail (~> 2.5.4)
@@ -25,9 +53,16 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
+    acts-as-taggable-on (2.4.1)
+      rails (>= 3, < 5)
+    afm (0.2.0)
     arel (4.0.2)
     atomic (1.1.14)
     builder (3.1.4)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.3)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -35,14 +70,21 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
+    color (1.4.2)
+    comma (3.2.0)
+      activesupport (>= 3.0.0)
+    dynamic_form (1.1.4)
     erubis (2.7.0)
     execjs (2.0.2)
+    gchartrb (0.8)
+    hashery (2.1.1)
+    hashie (2.0.5)
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
       activesupport (>= 3.0.0)
       multi_json (>= 1.2.0)
-    jquery-rails (3.1.0)
+    jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
     json (1.8.1)
@@ -50,9 +92,29 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.4)
+    nokogiri (1.6.1)
+      mini_portile (~> 0.5.0)
+    omniauth (1.1.4)
+      hashie (>= 1.2, < 3)
+      rack
+    paperclip (3.5.4)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.3)
+      mime-types
+    pdf-reader (1.3.3)
+      Ascii85 (~> 1.0.0)
+      afm (~> 0.2.0)
+      hashery (~> 2.0)
+      ruby-rc4
+      ttfunk
     polyglot (0.3.3)
+    prawn (0.12.0)
+      pdf-reader (>= 0.9.0)
+      ttfunk (~> 1.0.2)
     rack (1.5.2)
     rack-test (0.6.2)
       rack (>= 1.0)
@@ -64,6 +126,8 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.0.2)
       sprockets-rails (~> 2.0.0)
+    rails-observers (0.1.2)
+      activemodel (~> 4.0)
     railties (4.0.2)
       actionpack (= 4.0.2)
       activesupport (= 4.0.2)
@@ -72,6 +136,8 @@ GEM
     rake (10.1.1)
     rdoc (4.1.1)
       json (~> 1.4)
+    rinku (1.7.3)
+    ruby-rc4 (0.1.5)
     sass (3.2.14)
     sass-rails (4.0.1)
       railties (>= 4.0.0, < 5.0)
@@ -97,12 +163,14 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    ttfunk (1.0.3)
     turbolinks (2.2.1)
       coffee-rails
     tzinfo (0.3.38)
-    uglifier (2.4.0)
+    uglifier (2.3.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    vpim (13.11.11)
 
 PLATFORMS
   ruby
@@ -111,6 +179,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
+  open_conference_ware (~> 1.0.0.pre)!
   rails (= 4.0.2)
   sass-rails (~> 4.0.0)
   sdoc
