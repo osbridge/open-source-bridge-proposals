@@ -20,3 +20,4 @@ config/secrets.yml
 
 # Ignore third-party configuration files
 config/newrelic.yml
+config/errbit.yml

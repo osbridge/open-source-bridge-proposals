@@ -56,6 +56,9 @@ GEM
     acts-as-taggable-on (2.4.1)
       rails (>= 3, < 5)
     afm (0.2.0)
+    airbrake (3.1.15)
+      builder
+      multi_json
     arel (4.0.2)
     atomic (1.1.14)
     builder (3.1.4)
@@ -211,6 +214,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airbrake
   capistrano (= 3.0.1)
   capistrano-bundler (= 1.0.0)
   capistrano-rails (= 1.0.0)

@@ -16,6 +16,9 @@ gem 'omniauth-persona'
 # Set up New Relic for performance monitoring
 gem 'newrelic_rpm'
 
+# Report errors to our Errbit instance using the airbrake client
+gem 'airbrake'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
