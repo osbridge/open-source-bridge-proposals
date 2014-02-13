@@ -16,15 +16,11 @@ Rails.application.config.middleware.use OpenConferenceWare::OmniAuthBuilder do
   # Providers will be shown on the sign in page in the order they are added.
 
   # OpenID
-  # add 'omniauth-openid' to Gemfile and uncomment to enable OpenID
-  #
-  #require 'openid/store/filesystem'
-  #provider :openid, store: OpenID::Store::Filesystem.new(Rails.root.join('tmp'))
+  require 'openid/store/filesystem'
+  provider :openid, store: OpenID::Store::Filesystem.new(Rails.root.join('tmp'))
 
   # Persona
-  # add 'omniauth-persona' to Gemfile and uncomment to enable Persona
-  #
-  #provider :persona
+  provider :persona
 
   # Developer
   # Used to provide easy authentication during development
