@@ -9,7 +9,7 @@ OpenConferenceWare.configure do |config|
   # Mailer host
   # The hostname to use when generating links in emails.
   # This shoud be the domain where OCW is hosted.
-  config.mailer_host = 'ocw.local'
+  config.mailer_host = 'opensourcebridge.org'
 
   # Event name, or organization running events:
   config.organization = 'Open Source Bridge'
