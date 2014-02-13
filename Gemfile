@@ -13,6 +13,9 @@ gem 'open_conference_ware', '~> 1.0.0.pre', git: 'https://github.com/osbridge/op
 gem 'omniauth-openid'
 gem 'omniauth-persona'
 
+# Set up New Relic for performance monitoring
+gem 'newrelic_rpm'
+
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 

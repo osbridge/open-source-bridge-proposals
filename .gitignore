@@ -17,3 +17,6 @@
 
 # Ignore OpenConferenceWare's secrets
 config/secrets.yml
+
+# Ignore third-party configuration files
+config/newrelic.yml

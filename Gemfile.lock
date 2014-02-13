@@ -109,6 +109,7 @@ GEM
     net-scp (1.1.2)
       net-ssh (>= 2.6.5)
     net-ssh (2.8.0)
+    newrelic_rpm (3.7.2.192)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     omniauth (1.1.4)
@@ -216,6 +217,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
   jquery-rails
+  newrelic_rpm
   omniauth-openid
   omniauth-persona
   open_conference_ware (~> 1.0.0.pre)!
