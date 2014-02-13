@@ -19,8 +19,8 @@ gem 'newrelic_rpm'
 # Report errors to our Errbit instance using the airbrake client
 gem 'airbrake'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+# Use mysql2 as the database for Active Record
+gem 'mysql2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
