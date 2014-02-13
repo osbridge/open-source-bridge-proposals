@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
+# Use puma as our production app server
+gem 'puma'
+
 # Use OpenConferenceWare
 gem 'open_conference_ware', '~> 1.0.0.pre', git: 'https://github.com/osbridge/openconferenceware.git'
 
