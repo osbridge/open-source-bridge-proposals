@@ -22,5 +22,8 @@ config/secrets.yml
 config/newrelic.yml
 config/errbit.yml
 
+# Ignore the default database.yml
+config/database.yml
+
 # Ignore the local 'secrets' directory
 secrets/
