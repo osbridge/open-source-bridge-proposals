@@ -8,8 +8,24 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require bootstrap-forms
+ *= require bootstrap-theme
  *= require persona-buttons
  *= require farbtastic
  *= require openid-selector/openid
  *= require open_conference_ware/custom
+ *= require_self
  */
+
+/* Fix for Bootstrap's use of box-sizing: border-box; */
+#container,
+#content,
+.user_photo,
+.inner_container,
+li.event a.year,
+li.event a.year:hover,
+.sidebar {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
