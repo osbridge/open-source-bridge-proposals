@@ -13,6 +13,7 @@ gem 'open_conference_ware', '~> 1.0.0.pre', git: 'https://github.com/osbridge/op
 gem 'omniauth-openid'
 gem 'omniauth-persona'
 gem 'omniauth-github'
+gem 'omniauth-twitter'
 
 # Assets
 gem 'font-awesome-rails'

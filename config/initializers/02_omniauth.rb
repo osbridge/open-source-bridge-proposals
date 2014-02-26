@@ -35,6 +35,11 @@ Rails.application.config.middleware.use OpenConferenceWare::OmniAuthBuilder do
     provider :github, secrets["github_key"], secrets["github_secret"]
   end
 
+  # Twitter
+  if secrets.has_key?("twitter_key")
+    provider :twitter, secrets["twitter_key"], secrets["twitter_secret"]
+  end
+
   # Developer
   # Used to provide easy authentication during development
   provider :developer if %w[development preview].include?(Rails.env)

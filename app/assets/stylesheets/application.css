@@ -32,5 +32,8 @@ li.event a.year:hover,
   box-sizing: content-box;
 }
 
-/* This really shouldn't be necessary... */
-a.btn-github { color: #fff; }
+/* Override visisted link styles for sign in buttons */
+a.btn-github,
+a.btn-twitter {
+  color: #fff;
+}
