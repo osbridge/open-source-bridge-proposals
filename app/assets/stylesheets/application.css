@@ -8,12 +8,14 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require bootstrap-custom
- *= require bootstrap-theme
+ *= require font-awesome
  *= require persona-buttons
  *= require farbtastic
  *= require openid-selector/openid
  *= require open_conference_ware/custom
+ *= require bootstrap-custom
+ *= require bootstrap-theme
+ *= require bootstrap-social
  *= require_self
  */
 
@@ -29,3 +31,6 @@ li.event a.year:hover,
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
+
+/* This really shouldn't be necessary... */
+a.btn-github { color: #fff; }

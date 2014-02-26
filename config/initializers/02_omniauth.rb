@@ -15,6 +15,14 @@ Rails.application.config.middleware.use OpenConferenceWare::OmniAuthBuilder do
   #
   # Providers will be shown on the sign in page in the order they are added.
 
+  secrets = {}
+  secrets_file = Rails.root.join('config', 'secrets.yml')
+  if File.exists?(secrets_file)
+    secrets = YAML.load_file(secrets_file)
+  else
+    raise "Oops, config/secrets.yml could not be found."
+  end
+
   # OpenID
   require 'openid/store/filesystem'
   provider :openid, store: OpenID::Store::Filesystem.new(Rails.root.join('tmp'))
@@ -22,7 +30,13 @@ Rails.application.config.middleware.use OpenConferenceWare::OmniAuthBuilder do
   # Persona
   provider :persona
 
+  # GitHub
+  if secrets.has_key?("github_key")
+    provider :github, secrets["github_key"], secrets["github_secret"]
+  end
+
   # Developer
   # Used to provide easy authentication during development
   provider :developer if %w[development preview].include?(Rails.env)
+
 end
