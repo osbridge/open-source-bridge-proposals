@@ -34,6 +34,12 @@ li.event a.year:hover,
 
 /* Override visisted link styles for sign in buttons */
 a.btn-github,
+a.btn-eventbrite,
 a.btn-twitter {
   color: #fff;
+}
+
+.btn-eventbrite {
+  color: #fff;
+  background: #FF6D00;
 }

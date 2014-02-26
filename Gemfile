@@ -14,6 +14,7 @@ gem 'omniauth-openid'
 gem 'omniauth-persona'
 gem 'omniauth-github'
 gem 'omniauth-twitter'
+gem 'omniauth-eventbrite'
 
 # Assets
 gem 'font-awesome-rails'
