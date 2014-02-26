@@ -1,21 +1,3 @@
-<script type="text/javascript">
-  $(document).ready(function () {
-    activate_menu_item();
-  });
-
-  function bind_multiyear_nav_controls() {
-    $('#menu li.event.active a.year').click(function(e) {
-      e.preventDefault();
-      $(e.target).parents('li.events').toggleClass('expanded');
-    });
-
-    $(document).bind('click', function(e) {
-        if (! $(e.target).parents().hasClass("events"))
-            $("#menu li.events").removeClass('expanded');
-    });
-  }
-</script>
-
 <div id="header">
  <div class='inner_container'>
     <h1 id="site-title"><span><a href="<%= OpenConferenceWare.public_url %>" title="<%= OpenConferenceWare.organization %>" rel="home"><%= OpenConferenceWare.organization %></a></span></h1>
