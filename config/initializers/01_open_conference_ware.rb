@@ -107,6 +107,9 @@ OpenConferenceWare.configure do |config|
   # OCW can generate links to an external system, such as a wiki or an Etherpad
   # instance, that provides a place for attendees to take notes.
 
+  # Public URL of website
+  config.public_url   = 'http://opensourcebridge.org/'
+
   # URL where OCW is installed
   config.app_root_url = 'http://opensourcebridge.org/'
 
