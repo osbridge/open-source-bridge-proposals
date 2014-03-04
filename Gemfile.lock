@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/osbridge/openconferenceware.git
-  revision: ec972f4767422cc6721cd301cbb2e152998907c3
+  revision: f95742448460215e6006a331814c677df4b1308f
   specs:
     open_conference_ware (1.0.0.pre3)
       RedCloth (~> 4.2.0)
