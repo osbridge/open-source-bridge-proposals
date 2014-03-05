@@ -1,0 +1,22 @@
+<div class="auth-provider">
+  <%= form_tag(auth_path(:open_id), :id => "openid_form" ) do %>
+    <fieldset>
+      <div id="openid_choice">
+        <div id="openid_btns"></div>
+      </div>
+      <div id="openid_input_area" class="form-group">
+        <%= text_field_tag "openid_url", "http://", id: "openid_url", class: 'form-control' %>
+        <%= submit_tag 'Log in', class: 'btn btn-default' %>
+      </div>
+      <noscript>
+        <p><%= snippet_for :login_openid_text %></p>
+      </noscript>
+    </fieldset>
+  <% end %>
+</div>
+
+<% run_when_dom_is_ready <<-JS
+  openid.img_path = '/assets/openid-selector/';
+  openid.init('openid_url');
+JS
+%>

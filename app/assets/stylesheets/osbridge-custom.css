@@ -1,0 +1,36 @@
+/* Fix for Bootstrap's use of box-sizing: border-box; */
+#container,
+#content,
+.user_photo,
+.inner_container,
+li.event a.year,
+li.event a.year:hover,
+.sidebar {
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* Override visisted link styles for sign in buttons */
+a.btn-github,
+a.btn-eventbrite,
+a.btn-twitter {
+  color: #fff;
+}
+
+.btn-eventbrite {
+  color: #fff;
+  background: #FF6D00;
+}
+
+#sign_in_buttons {
+  width: 250px;
+  float: left;
+  margin-right: 2em;
+}
+#sign_in_buttons .btn-social {
+  width: 200px;
+}
+#openid_form {
+  width: auto;
+}
