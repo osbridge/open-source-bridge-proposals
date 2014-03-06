@@ -126,7 +126,7 @@ OpenConferenceWare.configure do |config|
   # Policy agreement to show on the proposal form
   # If an agreement is set, presenters will be required to agree in order to submit a proposal.
   #
-  # config.agreement =  'I have reviewed and agree to the recording policy and code of conduct.'
+  config.agreement =  'I have read and agree to abide by the <a href="/about/code-of-conduct/">Code of Conduct</a>. I understand that my talk may be recorded, per our <a href="/about/recording-policy/">recording policy</a>, and posted online for the whole world to see. I understand that Open Source Bridge is not the appropriate place for commercial promotion ("spam") of a product, service or solution and this is not welcomed by the audience.'
 
   # Breadcrumbs that are always visible, each breadcrumb is a name and URI:
   # NOTE: The current default theme never displays any breadcrumbs, but infrastructure exists to support them.
