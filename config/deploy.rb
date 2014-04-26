@@ -15,7 +15,7 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 
 set :rails_env, :production  
 set :default_env, {
-  path: "#{shared_path}/ruby/bin:#{shared_path}/bin:$PATH:/sbin",
+  path: "#{shared_path}/ruby/bin:#{shared_path}/bin:$PATH:/usr/bin:/sbin",
   rails_env: fetch(:rails_env)
 }
 # set :keep_releases, 5
