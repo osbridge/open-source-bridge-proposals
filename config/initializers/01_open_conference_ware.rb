@@ -38,6 +38,13 @@ OpenConferenceWare.configure do |config|
     config.administrator_email = secrets["administrator_email"]
     config.comments_secret = secrets["comments_secret"]
     config.secret_key_base = secrets["secret_key_base"]
+    config.email = secrets["email"]
+
+    Rails.application.config.action_mailer.perform_deliveries = true
+    Rails.application.config.action_mailer.delivery_method = config.email["delivery_method"]
+    if config.email["delivery_method"] == "smtp"
+      Rails.application.config.action_mailer.smtp_settings = config.email["smtp_settings"]
+    end
   else
     raise "Oops, config/secrets.yml could not be found."
   end
@@ -132,4 +139,10 @@ OpenConferenceWare.configure do |config|
   # NOTE: The current default theme never displays any breadcrumbs, but infrastructure exists to support them.
   #
   # config.breadcrumbs = [['Home', 'http://openconferenceware.org']]
+  #
+  # Email Configuration
+  config.default_from_address = "reid@opensourcebridge.org"
+  config.default_bcc_address = "content@opensourcebridge.org"
+
+
 end
