@@ -41,9 +41,12 @@ OpenConferenceWare.configure do |config|
     config.email = secrets["email"]
 
     Rails.application.config.action_mailer.perform_deliveries = true
+    Rails.application.config.action_mailer.raise_delivery_errors = true
     Rails.application.config.action_mailer.delivery_method = config.email["delivery_method"]
     if config.email["delivery_method"] == "smtp"
-      Rails.application.config.action_mailer.smtp_settings = config.email["smtp_settings"]
+      Rails.application.config.action_mailer.smtp_settings = config.email["smtp_settings"].symbolize_keys
+    elsif config.email["delivery_method"] == "mandrill"
+      Rails.application.config.action_mailer.mandrill_settings = config.email["mandrill_settings"]
     end
   else
     raise "Oops, config/secrets.yml could not be found."
@@ -141,7 +144,7 @@ OpenConferenceWare.configure do |config|
   # config.breadcrumbs = [['Home', 'http://openconferenceware.org']]
   #
   # Email Configuration
-  config.default_from_address = "reid@opensourcebridge.org"
+  config.default_from_address = "content@opensourcebridge.org"
   config.default_bcc_address = "content@opensourcebridge.org"
 
 

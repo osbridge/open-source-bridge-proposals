@@ -77,4 +77,15 @@ OpenSourceBridgeProposals::Application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'smtp.mandrillapp.com',
+    port:                 25,
+    user_name:            'reid@stumptownsyndicate.org',
+    password:             'e7s6dtQWJIGJu3x7iUetHw',
+    authentication:       'plain',
+    enable_starttls_auto: false,
+    openssl_verify_mode:  'none'
+  }
 end
