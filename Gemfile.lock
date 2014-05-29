@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/osbridge/openconferenceware.git
-  revision: e087506b34597f38a4c24f6bad4ba6f10e734e91
+  revision: e6232050540cbed29d3d372b38b1b73efbfd6108
   specs:
     open_conference_ware (1.0.0.pre3)
       RedCloth (~> 4.2.0)
@@ -81,11 +81,11 @@ GEM
       execjs
     coffee-script-source (1.7.0)
     color (1.5.1)
-    comma (3.2.0)
+    comma (3.2.1)
       activesupport (>= 3.0.0)
     dynamic_form (1.1.4)
     erubis (2.7.0)
-    execjs (2.0.2)
+    execjs (2.1.0)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
     font-awesome-rails (4.0.3.1)
@@ -109,9 +109,9 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
-    mini_portile (0.5.3)
+    mini_portile (0.6.0)
     minitest (4.7.5)
-    multi_json (1.10.0)
+    multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
     mysql2 (0.3.15)
@@ -119,8 +119,8 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (2.8.0)
     newrelic_rpm (3.7.2.192)
-    nokogiri (1.6.1)
-      mini_portile (~> 0.5.0)
+    nokogiri (1.6.2.1)
+      mini_portile (= 0.6.0)
     oauth (0.4.7)
     oauth2 (0.9.3)
       faraday (>= 0.8, < 0.10)
@@ -192,7 +192,7 @@ GEM
       activesupport (= 4.0.5)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (10.3.1)
+    rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
     rinku (1.7.3)
@@ -223,7 +223,7 @@ GEM
     term-ansicolor (1.3.0)
       tins (~> 1.0)
     thor (0.19.1)
-    thread_safe (0.3.3)
+    thread_safe (0.3.4)
     tilt (1.4.1)
     tins (1.0.0)
     treetop (1.4.15)
