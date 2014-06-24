@@ -16,6 +16,9 @@ gem 'omniauth-github'
 gem 'omniauth-twitter'
 gem 'omniauth-eventbrite'
 
+# MediaWiki manipulation
+gem 'mediawiki-gateway', require: false
+
 # Assets
 gem 'font-awesome-rails'
 

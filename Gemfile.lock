@@ -108,6 +108,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mediawiki-gateway (0.6.0)
+      activesupport
+      rest-client (>= 1.3.0)
     mime-types (1.25.1)
     mini_portile (0.6.0)
     minitest (4.7.5)
@@ -195,6 +198,8 @@ GEM
     rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
     rinku (1.7.3)
     ruby-openid (2.3.0)
     ruby-rc4 (0.1.5)
@@ -251,6 +256,7 @@ DEPENDENCIES
   highline
   jbuilder (~> 1.2)
   jquery-rails
+  mediawiki-gateway
   mysql2
   newrelic_rpm
   omniauth-eventbrite
