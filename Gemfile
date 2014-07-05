@@ -19,6 +19,9 @@ gem 'omniauth-eventbrite'
 # MediaWiki manipulation
 gem 'mediawiki-gateway', require: false
 
+# Clean up invalid UTF8 characters in request URI and headers.
+gem 'rack-utf8_sanitizer'
+
 # Assets
 gem 'font-awesome-rails'
 
