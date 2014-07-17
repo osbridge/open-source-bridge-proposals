@@ -22,5 +22,13 @@ module OpenSourceBridgeProposals
 
     # Clean up invalid UTF8 characters in request URI and headers.
     config.middleware.insert 0, Rack::UTF8Sanitizer
+
+    config.middleware.use Rack::Robustness do |g|
+      g.no_catch_all
+      g.on(ArgumentError) { |ex| 400 }
+      g.content_type 'text/plain'
+      g.body{ |ex| ex.message }
+      g.ensure(true) { |ex| env['rack.errors'].write(ex.message) }
+    end
   end
 end

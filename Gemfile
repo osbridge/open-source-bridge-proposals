@@ -22,6 +22,9 @@ gem 'mediawiki-gateway', require: false
 # Clean up invalid UTF8 characters in request URI and headers.
 gem 'rack-utf8_sanitizer'
 
+# Catch and handle Rack errors
+gem 'rack-robustness'
+
 # Assets
 gem 'font-awesome-rails'
 
