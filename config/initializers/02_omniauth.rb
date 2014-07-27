@@ -40,7 +40,7 @@ Rails.application.config.middleware.use OpenConferenceWare::OmniAuthBuilder do
     provider :twitter, secrets["twitter_key"], secrets["twitter_secret"]
   end
 
-  # Twitter
+  # Eventbrite
   if secrets.has_key?("eventbrite_key")
     provider :eventbrite, secrets["eventbrite_key"], secrets["eventbrite_secret"]
   end
