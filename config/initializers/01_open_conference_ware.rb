@@ -20,12 +20,12 @@ OpenConferenceWare.configure do |config|
   # Top-level tagline or description.
   config.tagline = 'The conference for open source citizens'
 
-  # What is the slug for the current event? E.g., if this is '2014' and the user
+  # What is the slug for the current event? E.g., if this is '2012' and the user
   # visits the '/proposals' URI, then the system will try to lookup an Event with
   # the '2012' slug and redirect to '/events/2012/proposals' if it's available.
   #
   # TODO: Setting the current event here is a short-term hack and will be replaced shortly with a Site record that tracks the current event in the database and provides a way to set it through an admin web UI.
-  config.current_event_slug = '2014'
+  config.current_event_slug = '2015'
 
   ##[ Secrets ]##
   # Some are sensitive and should not be checked in to version control.
