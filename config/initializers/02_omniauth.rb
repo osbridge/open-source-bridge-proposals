@@ -23,6 +23,9 @@ Rails.application.config.middleware.use OpenConferenceWare::OmniAuthBuilder do
     raise "Oops, config/secrets.yml could not be found."
   end
 
+  require "openid/fetchers"
+  OpenID.fetcher.ca_file = "/etc/ssl/certs/ca-certificates.crt"
+
   # OpenID
   require 'openid/store/filesystem'
   provider :openid, store: OpenID::Store::Filesystem.new(Rails.root.join('tmp'))
