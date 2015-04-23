@@ -65,6 +65,9 @@ OpenSourceBridgeProposals::Application.configure do
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
+  Rails.application.config.action_mailer.perform_deliveries = true
+  Rails.application.config.action_mailer.raise_delivery_errors = true
+
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation can not be found).
   config.i18n.fallbacks = true
@@ -83,9 +86,10 @@ OpenSourceBridgeProposals::Application.configure do
     address:              'smtp.mandrillapp.com',
     port:                 25,
     user_name:            'reid@stumptownsyndicate.org',
-    password:             'e7s6dtQWJIGJu3x7iUetHw',
-    authentication:       'plain',
-    enable_starttls_auto: false,
+    password:             'e7s6dtQWJIGJu3x7iUetHw', # this key will only work from our servers
+    domain:               'opensourcebridge.org',
+    authentication:       'login',
+    enable_starttls_auto: true,
     openssl_verify_mode:  'none'
   }
 end

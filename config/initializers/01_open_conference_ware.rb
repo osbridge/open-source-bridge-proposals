@@ -38,19 +38,14 @@ OpenConferenceWare.configure do |config|
     config.administrator_email = secrets["administrator_email"]
     config.comments_secret = secrets["comments_secret"]
     config.secret_key_base = secrets["secret_key_base"]
-    config.email = secrets["email"]
-
-    Rails.application.config.action_mailer.perform_deliveries = true
-    Rails.application.config.action_mailer.raise_delivery_errors = true
-    Rails.application.config.action_mailer.delivery_method = config.email["delivery_method"]
-    if config.email["delivery_method"] == "smtp"
-      Rails.application.config.action_mailer.smtp_settings = config.email["smtp_settings"].symbolize_keys
-    elsif config.email["delivery_method"] == "mandrill"
-      Rails.application.config.action_mailer.mandrill_settings = config.email["mandrill_settings"]
-    end
   else
     raise "Oops, config/secrets.yml could not be found."
   end
+
+  config.email = {
+    "action_mailer" => {"enabled" => true},
+    "default_from_address" => config.default_from_address
+  }
 
   ##[ OCW Features ]##
   # Many features of OpenConferenceWare can be toggled via these settings
