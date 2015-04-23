@@ -43,6 +43,12 @@ Rails.application.config.middleware.use OpenConferenceWare::OmniAuthBuilder do
     provider :twitter, secrets["twitter_key"], secrets["twitter_secret"]
   end
 
+  # Google
+  if secrets.has_key?("google_key")
+    provider :google_oauth2, secrets["google_key"], secrets["google_secret"],
+      openid_realm: "http://opensourcebridge.org/"
+  end
+
   # Eventbrite
   if secrets.has_key?("eventbrite_key")
     provider :eventbrite, secrets["eventbrite_key"], secrets["eventbrite_secret"]

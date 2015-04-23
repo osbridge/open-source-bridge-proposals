@@ -15,6 +15,7 @@ gem 'omniauth-persona'
 gem 'omniauth-github'
 gem 'omniauth-twitter'
 gem 'omniauth-eventbrite'
+gem 'omniauth-google-oauth2'
 
 # MediaWiki manipulation
 gem 'mediawiki-gateway', require: false
