@@ -1,3 +1,8 @@
+require 'capistrano-db-tasks'
+
+# Disallow pushing the local DB to the remote server
+set :disallow_pushing, true
+
 set :application, 'osbridge-ocw'
 set :repo_url, 'git@github.com:osbridge/open-source-bridge-proposals.git'
 
