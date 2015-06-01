@@ -34,3 +34,25 @@ a.btn-twitter {
 #openid_form {
   width: auto;
 }
+
+.see-this-talk {
+  background: #3F429B;
+  color: #fff;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+.see-this-talk h4 {
+  color: #fff;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.5em;
+}
+.see-this-talk a {
+  line-height: 1em;
+  display: inline-block;
+  color: #3F429B;
+  background: #fff;
+  font-weight: bold;
+  padding: .25em .5em;
+  float: right;
+}
