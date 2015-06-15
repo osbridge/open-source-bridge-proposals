@@ -26,6 +26,7 @@ set :default_env, {
 # set :keep_releases, 5
 
 before  'deploy:assets:precompile', 'deploy:migrate'
+after   'deploy:published', 'airbrake:deploy'
 
 namespace :deploy do
   [:start, :stop, :reload].each do |t|
