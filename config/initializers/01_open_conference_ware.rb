@@ -25,7 +25,7 @@ OpenConferenceWare.configure do |config|
   # the '2012' slug and redirect to '/events/2012/proposals' if it's available.
   #
   # TODO: Setting the current event here is a short-term hack and will be replaced shortly with a Site record that tracks the current event in the database and provides a way to set it through an admin web UI.
-  config.current_event_slug = '2015'
+  config.current_event_slug = '2016'
 
   ##[ Secrets ]##
   # Some are sensitive and should not be checked in to version control.
