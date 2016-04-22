@@ -136,7 +136,4 @@ OpenConferenceWare.configure do |config|
   # Email Configuration
   config.default_from_address = "content@opensourcebridge.org"
   config.default_bcc_address = "content@opensourcebridge.org"
-
-  # override email setting
-  config.email["default_from_address"] = config.default_from_address
 end
