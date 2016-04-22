@@ -33,19 +33,14 @@ OpenConferenceWare.configure do |config|
   # server and linked by your deployment process.
 
   secrets_file = Rails.root.join('config', 'secrets.yml')
-  if File.exists?(secrets_file)
-    secrets = YAML.load_file(secrets_file)
-    config.administrator_email = secrets["administrator_email"]
-    config.comments_secret = secrets["comments_secret"]
-    config.secret_key_base = secrets["secret_key_base"]
-  else
+  unless File.exists?(secrets_file)
     raise "Oops, config/secrets.yml could not be found."
   end
 
-  config.email = {
-    "action_mailer" => {"enabled" => true},
-    "default_from_address" => config.default_from_address
-  }
+  secrets = YAML.load_file(secrets_file)
+  config.administrator_email = secrets["administrator_email"]
+  config.comments_secret = secrets["comments_secret"]
+  config.secret_key_base = secrets["secret_key_base"]
 
   ##[ OCW Features ]##
   # Many features of OpenConferenceWare can be toggled via these settings
@@ -142,5 +137,6 @@ OpenConferenceWare.configure do |config|
   config.default_from_address = "content@opensourcebridge.org"
   config.default_bcc_address = "content@opensourcebridge.org"
 
-
+  # override email setting
+  config.email["default_from_address"] = config.default_from_address
 end
