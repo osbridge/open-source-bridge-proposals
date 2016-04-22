@@ -10,6 +10,6 @@ OpenSourceBridgeProposals::Application.configure do
   # override email setting
   config.email = {
     "action_mailer" => {"enabled" => true},
-    "default_from_address" => config.default_from_address
+    "default_from_address" => "content@opensourcebridge.org"
   }
 end
