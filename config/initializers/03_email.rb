@@ -6,7 +6,7 @@ OpenSourceBridgeProposals::Application.configure do
 
   secrets = YAML.load_file(secrets_file)
   config.action_mailer.delivery_method = secrets["email"]["delivery_method"].to_sym
-  config.action_mailer.smtp_settings = secrets["email"]["smtp_settings"]
+  config.action_mailer.smtp_settings = secrets["email"]["smtp_settings"].symbolize_keys
 
   # override email setting
   config.email = {
