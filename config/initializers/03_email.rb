@@ -12,4 +12,8 @@ OpenSourceBridgeProposals::Application.configure do
     "action_mailer" => {"enabled" => true},
     "default_from_address" => "content@opensourcebridge.org"
   }
+
+  # OpenConferenceWare::SpeakerMailer looks for settings under OpenConferenceWare.email
+  OpenConferenceWare.email = config.email
+
 end
