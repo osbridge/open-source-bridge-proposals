@@ -1,5 +1,5 @@
 <% if @proposal.event.current? && Date.today < @proposal.event.dates.first %>
   <div class='see-this-talk'>
-    <h4>See this talk at Open Source Bridge 2015! <%= link_to "Register today!", "https://osbridge.eventbrite.com/" %></h4>
+    <h4>See this talk at Open Source Bridge <%= @proposal.event.dates.first.year %>! <%= link_to "Register today!", "https://osbridge.eventbrite.com/" %></h4>
   </div>
 <% end %>
