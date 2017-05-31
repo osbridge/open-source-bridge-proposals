@@ -56,3 +56,15 @@ a.btn-twitter {
   padding: .25em .5em;
   float: right;
 }
+
+body.schedule #container .sidebar {
+  display: none;
+}
+
+body.schedule #container #content {
+  width: auto;
+}
+
+body.schedule #content table.schedule {
+  padding-right: 220px;
+}
